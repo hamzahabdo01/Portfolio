@@ -35,7 +35,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-5xl md:text-6xl font-bold"
+                className="text-3xl md:text-6xl font-bold"
               >
                 <span className="block text-foreground">Hamzah Abdo</span>
                 <span className="block gradient-text">Full Stack Developer</span>
@@ -45,7 +45,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-lg text-muted-foreground max-w-2xl leading-relaxed"
+                className="text-md text-muted-foreground max-w-2xl leading-relaxed"
               >
                 My goal is to write clean, maintainable code that enhances the development 
                 process and makes coding enjoyable through structured and thoughtful practices.
@@ -59,9 +59,6 @@ const HeroSection = () => {
               transition={{ delay: 0.8 }}
               className="space-y-4"
             >
-              <p className="text-muted-foreground italic">
-                "I have worked with multiple web development teams"
-              </p>
               <div className="flex items-center space-x-2">
                 {testimonialAvatars.map((avatar, index) => (
                   <motion.img

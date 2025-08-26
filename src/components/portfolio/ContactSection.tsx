@@ -173,11 +173,7 @@ const ContactSection = () => {
           </motion.div>
 
           {/* Quick Contact Options */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          <div
             className="space-y-6"
           >
             <div>
@@ -232,7 +228,7 @@ const ContactSection = () => {
                 Whether you're a company looking to hire, or you're someone looking to build something amazing, I'd love to hear from you.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

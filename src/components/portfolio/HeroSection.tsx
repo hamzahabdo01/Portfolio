@@ -1,15 +1,12 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Dribbble, User, Briefcase } from 'lucide-react';
+import { Github, User, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImage from '@/assets/profile-picture.jpg';
+import profileImage from '@/assets/photo_2024-11-13_15-23-00.jpg';
 
 const HeroSection = () => {
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Dribbble, href: 'https://dribbble.com', label: 'Dribbble' },
-    { icon: User, href: 'https://behance.net', label: 'Behance' },
-    { icon: Briefcase, href: 'https://fiverr.com', label: 'Fiverr' },
+    { icon: Github, href: 'https://github.com/hamzahabdo01', label: 'GitHub' },
+    { icon: Briefcase, href: 'https://www.upwork.com/freelancers/~01c02c39f2acabd445', label: 'Upwork' },
   ];
 
   const testimonialAvatars = [
@@ -40,7 +37,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.2 }}
                 className="text-5xl md:text-6xl font-bold"
               >
-                <span className="block text-foreground">Joshi Tushar</span>
+                <span className="block text-foreground">Hamzah Abdo</span>
                 <span className="block gradient-text">Full Stack Developer</span>
               </motion.h1>
               
@@ -54,21 +51,7 @@ const HeroSection = () => {
                 process and makes coding enjoyable through structured and thoughtful practices.
               </motion.p>
             </div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-            >
-              <Button
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                size="lg"
-                className="gradient-primary text-white font-semibold px-8 py-3 rounded-lg hover:shadow-glow transition-all duration-300"
-              >
-                View Portfolio
-              </Button>
-            </motion.div>
-            
+
             {/* Testimonial */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -77,7 +60,7 @@ const HeroSection = () => {
               className="space-y-4"
             >
               <p className="text-muted-foreground italic">
-                "I have worked with over 25 Budsaye teams"
+                "I have worked with multiple web development teams"
               </p>
               <div className="flex items-center space-x-2">
                 {testimonialAvatars.map((avatar, index) => (

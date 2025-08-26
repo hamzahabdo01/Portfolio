@@ -4,12 +4,12 @@ import { User, Globe, Phone, Award, Users, Languages } from 'lucide-react';
 
 const AboutSection = () => {
   const personalInfo = [
-    { icon: User, label: 'Name', value: 'Tushar Narendrakumar Joshi' },
-    { icon: Globe, label: 'Nationality', value: 'Indian' },
-    { icon: Phone, label: 'Phone', value: '(+91) 9726286345' },
-    { icon: Award, label: 'Experience', value: '20+ Years' },
+    { icon: User, label: 'Name', value: 'Hamzah Abdo Ahmed' },
+    { icon: Globe, label: 'Nationality', value: 'Yemeni/Ethiopian' },
+    { icon: Phone, label: 'Phone', value: '(+251) 991847935' },
+    { icon: Award, label: 'Experience', value: '2+ Years' },
     { icon: Users, label: 'Freelance', value: 'Available' },
-    { icon: Languages, label: 'Language', value: 'Gujarati / Hindi / English' },
+    { icon: Languages, label: 'Language', value: 'Arabic / English / Amharic' },
   ];
 
   return (
@@ -26,8 +26,8 @@ const AboutSection = () => {
             <span className="gradient-text">About</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Hello! I'm Tushar Joshi, a full-stack developer with nearly 20 years of experience in building 
-            scalable applications. I specialize in Angular, Ionic, PHP (CodeIgniter), and Node.js. 
+            Hello! I'm Hamzah Abdo, a full-stack developer with nearly 3 years of experience in building 
+            scalable applications. I specialize in React, Supabase, Firebase, and Node.js. 
             Committed to continuous learning, I prioritize success and customer satisfaction.
           </p>
         </motion.div>

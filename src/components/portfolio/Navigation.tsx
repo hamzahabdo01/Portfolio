@@ -41,7 +41,7 @@ const Navigation = () => {
             animate={{ opacity: 1 }}
             className="text-xl font-bold gradient-text"
           >
-            Tushar Joshi
+            Hamzah Abdo
           </motion.div>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -49,7 +49,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-foreground transition-colors duration-200 font-medium"
               >
                 {item.name}
               </button>
@@ -60,7 +60,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('contact')}
             className="gradient-primary text-white font-semibold px-6 py-2 rounded-lg hover:shadow-glow transition-all duration-300"
           >
-            Light Up the Talk
+            Let's Connect
           </Button>
         </div>
       </div>

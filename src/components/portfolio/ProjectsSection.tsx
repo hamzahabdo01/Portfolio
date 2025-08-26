@@ -3,7 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 import photo1 from '@/assets/image.png';
-import photo2 from '@/assets/photo_2024-11-13_15-23-00.jpg';
+// import photo3 from '@/assets/huma-kabakci-oRk4Ep65tRc-unsplash.jpg';
+import photo2 from '@/assets/ChatGPT Image Aug 26, 2025, 06_33_56 PM.png';
 
 const ProjectsSection = () => {
   const projects = [
@@ -13,23 +14,26 @@ const ProjectsSection = () => {
       techStack: ['React', 'Supabase', 'Tailwind CSS'],
       image: photo1,
       demoUrl: 'https://huda-engineering-plc.netlify.app',
-      githubUrl: 'https://github.com/hamzahabdo01'
+      githubUrl: 'https://github.com/hamzahabdo01',
+      comingSoon: false
     },
     {
-      title: 'Task Management System',
-      description: 'Collaborative project management tool with real-time updates, team collaboration features, and comprehensive reporting dashboard.',
-      techStack: ['Ionic', 'PHP CodeIgniter', 'MySQL', 'Socket.io'],
+      title: 'Mobile E-Commerce',
+      description: 'Collaborative e-commerce tool with real-time updates, team collaboration features, and comprehensive reporting dashboard.',
+      techStack: ['React', 'Next.js', 'Firebase'],
       image: photo2,
-      demoUrl: '#',
-      githubUrl: '#'
+      demoUrl: 'https://sukoch.netlify.app',
+      githubUrl: 'https://github.com/hamzahabdo01',
+      comingSoon: false
     },
     {
-      title: 'Healthcare Management System',
-      description: 'Comprehensive healthcare platform for patient management, appointment scheduling, and medical records with HIPAA compliance.',
-      techStack: ['Angular', 'Node.js', 'PostgreSQL', 'Docker'],
-      image: photo1,
-      demoUrl: '#',
-      githubUrl: '#'
+      title: 'Blockchain Escrow System',
+      description: 'Decentralized application for secure document management and verification using blockchain technology.',
+      techStack: ['React', 'Golang', 'MySQL', 'Ethereum'],
+      image: '',
+      demoUrl: null,
+      githubUrl: null,
+      comingSoon: true
     }
   ];
 
@@ -65,9 +69,16 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                    className={`w-full h-48 object-cover transition-transform duration-300 ${project.comingSoon ? 'opacity-70' : 'hover:scale-110'}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  {project.comingSoon && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="px-3 py-1 text-lg font-bold text-white bg-yellow-600 rounded-lg shadow-lg">
+                        🚧 Coming Soon
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 <CardHeader>
@@ -93,23 +104,31 @@ const ProjectsSection = () => {
                   </div>
                   
                   <div className="flex gap-4 mt-auto">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex-1 border-border hover:border-primary hover:bg-primary/10"
-                      onClick={() => window.open(project.demoUrl, '_blank')}
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Project
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-border hover:border-primary hover:bg-primary/10"
-                      onClick={() => window.open(project.githubUrl, '_blank')}
-                    >
-                      <Github className="w-4 h-4" />
-                    </Button>
+                    {project.comingSoon ? (
+                      <span className="px-3 py-2 text-sm font-semibold text-yellow-600 bg-yellow-100 border border-yellow-300 rounded">
+                        🚧 Coming Soon
+                      </span>
+                    ) : (
+                      <>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 border-border hover:border-primary hover:bg-primary/10"
+                          onClick={() => window.open(project.demoUrl, '_blank')}
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          View Project
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-border hover:border-primary hover:bg-primary/10"
+                          onClick={() => window.open(project.githubUrl, '_blank')}
+                        >
+                          <Github className="w-4 h-4" />
+                        </Button>
+                      </>
+                    )}
                   </div>
                 </CardContent>
               </Card>

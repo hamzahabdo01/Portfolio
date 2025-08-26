@@ -213,8 +213,8 @@ const ContactSection = () => {
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Mail className="w-6 h-6 text-primary" />
+                    <div className="p-3 bg-black rounded-lg">
+                      <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Email</h4>

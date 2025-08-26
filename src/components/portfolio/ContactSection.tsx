@@ -40,12 +40,12 @@ const ContactSection = () => {
   };
 
   const handleWhatsApp = () => {
-    const message = encodeURIComponent("Hi Tushar! I'd like to discuss a project with you.");
-    window.open(`https://wa.me/919726286345?text=${message}`, '_blank');
+    const message = encodeURIComponent("Hi Hamzah! I'd like to discuss a project with you.");
+    window.open(`https://wa.me/251991847935?text=${message}`, '_blank');
   };
 
   const handleEmail = () => {
-    window.open('mailto:tushar@example.com?subject=Project Inquiry', '_blank');
+    window.open('mailto:hamza.abdo19@gmail.com?subject=Project Inquiry', '_blank');
   };
 
   return (
@@ -169,7 +169,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">WhatsApp</h4>
-                      <p className="text-muted-foreground">+91 9726286345</p>
+                      <p className="text-muted-foreground">+251 99 184 7935</p>
                     </div>
                   </div>
                 </CardContent>
@@ -186,7 +186,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Email</h4>
-                      <p className="text-muted-foreground">tushar@example.com</p>
+                      <p className="text-muted-foreground">hamza.abdo19@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>

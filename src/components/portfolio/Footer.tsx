@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <p className="text-muted-foreground">
-            © 2025 Tushar Joshi. All Rights Reserved.
+            © 2025 Hamzah Abdo. All Rights Reserved.
           </p>
         </div>
       </div>

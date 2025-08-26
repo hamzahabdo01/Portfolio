@@ -15,37 +15,31 @@ const SkillsSection = () => {
       icon: Layers,
       title: 'Tech Stack',
       color: 'text-blue-400',
-      skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Ionic', 'Express', 'Node.js', '.NET', 'MongoDB', 'MySQL', 'PHP CodeIgniter']
     },
     {
       icon: Code,
       title: 'Front-End Side',
       color: 'text-green-400',
-      skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Ionic', 'Express', 'CodeIgniter']
     },
     {
       icon: Server,
       title: 'Back-End Side',
       color: 'text-orange-400',
-      skills: ['PHP CodeIgniter', 'JavaScript', 'Node.js', 'Express.js', 'MySQL', 'MongoDB', 'Linux', 'Apache', 'Nginx', 'Docker', 'Git', 'RESTful API']
     },
     {
       icon: Palette,
       title: 'UI & Styling',
       color: 'text-purple-400',
-      skills: ['HTML', 'CSS', 'Sass', 'jQuery', 'Bootstrap', 'Tailwind CSS', 'Material UI', 'Media queries', 'Figma', 'Grid', 'Animations (GSAP, Anime.js)']
     },
     {
       icon: Database,
       title: 'Database',
       color: 'text-red-400',
-      skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQL Server', 'MS Access', 'Schema design', 'indexing', 'normalization', 'entity-relationship modeling', 'ERD', 'document-based modeling']
     },
     {
       icon: Globe,
       title: 'REST API / APIs',
       color: 'text-cyan-400',
-      skills: ['Design', 'Documentation', 'Express', 'JWT', 'OAuth', 'Postman', 'Swagger', 'Rate Limiting', 'Validation', 'CORS', 'HTTPS', 'Third-party API integration']
     }
   ];
 
@@ -87,22 +81,6 @@ const SkillsSection = () => {
                     </CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, skillIndex) => (
-                      <motion.span
-                        key={skill}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
-                        viewport={{ once: true }}
-                        className="px-3 py-1 bg-card border border-border rounded-full text-sm text-foreground hover:border-primary hover:bg-primary/10 transition-all duration-200"
-                      >
-                        {skill}
-                      </motion.span>
-                    ))}
-                  </div>
-                </CardContent>
               </Card>
             </motion.div>
           ))}

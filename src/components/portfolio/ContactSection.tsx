@@ -26,17 +26,49 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      const formId = import.meta.env.VITE_FORMSPREE_FORM_ID as string | undefined;
+      if (!formId) {
+        throw new Error('Missing Formspree form ID. Set VITE_FORMSPREE_FORM_ID in your environment.');
+      }
+
+      const res = await fetch(`https://formspree.io/f/${formId}`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        const errorMsg = (data && data.error) || 'Unable to send your message right now.';
+        throw new Error(errorMsg);
+      }
+
       toast({
-        title: "Message Sent!",
+        title: 'Message Sent!',
         description: "Thank you for your message. I'll get back to you soon!",
       });
       setFormData({ name: '', email: '', message: '' });
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Unexpected error, please try again.';
+      toast({
+        title: 'Something went wrong',
+        description: msg,
+        variant: 'destructive'
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleWhatsApp = () => {

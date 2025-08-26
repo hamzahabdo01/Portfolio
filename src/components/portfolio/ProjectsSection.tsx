@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
+import photo1 from '@/assets/photo_2024-11-13_15-23-00.jpg';
+import profilePicture from '@/assets/profile-picture.jpg';
 
 const ProjectsSection = () => {
   const projects = [
@@ -9,7 +11,7 @@ const ProjectsSection = () => {
       title: 'E-Commerce Platform',
       description: 'Full-stack e-commerce solution built with Angular and Node.js, featuring real-time inventory management, payment integration, and advanced analytics.',
       techStack: ['Angular', 'Node.js', 'MongoDB', 'Express.js', 'Stripe API'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&crop=center',
+      image: photo1,
       demoUrl: '#',
       githubUrl: '#'
     },
@@ -17,7 +19,7 @@ const ProjectsSection = () => {
       title: 'Task Management System',
       description: 'Collaborative project management tool with real-time updates, team collaboration features, and comprehensive reporting dashboard.',
       techStack: ['Ionic', 'PHP CodeIgniter', 'MySQL', 'Socket.io'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop&crop=center',
+      image: profilePicture,
       demoUrl: '#',
       githubUrl: '#'
     },
@@ -25,7 +27,7 @@ const ProjectsSection = () => {
       title: 'Healthcare Management System',
       description: 'Comprehensive healthcare platform for patient management, appointment scheduling, and medical records with HIPAA compliance.',
       techStack: ['Angular', 'Node.js', 'PostgreSQL', 'Docker'],
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&crop=center',
+      image: photo1,
       demoUrl: '#',
       githubUrl: '#'
     }

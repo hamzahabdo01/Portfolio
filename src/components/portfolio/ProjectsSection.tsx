@@ -2,24 +2,24 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
-import photo1 from '@/assets/photo_2024-11-13_15-23-00.jpg';
-import profilePicture from '@/assets/profile-picture.jpg';
+import photo1 from '@/assets/image.png';
+import photo2 from '@/assets/photo_2024-11-13_15-23-00.jpg';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution built with Angular and Node.js, featuring real-time inventory management, payment integration, and advanced analytics.',
-      techStack: ['Angular', 'Node.js', 'MongoDB', 'Express.js', 'Stripe API'],
+      title: 'Real Estate Platform',
+      description: 'Full-stack real estate solution built with React and Supabase, featuring real-time property management and advanced analytics.',
+      techStack: ['React', 'Supabase', 'Tailwind CSS'],
       image: photo1,
-      demoUrl: '#',
-      githubUrl: '#'
+      demoUrl: 'https://huda-engineering-plc.netlify.app',
+      githubUrl: 'https://github.com/hamzahabdo01'
     },
     {
       title: 'Task Management System',
       description: 'Collaborative project management tool with real-time updates, team collaboration features, and comprehensive reporting dashboard.',
       techStack: ['Ionic', 'PHP CodeIgniter', 'MySQL', 'Socket.io'],
-      image: profilePicture,
+      image: photo2,
       demoUrl: '#',
       githubUrl: '#'
     },

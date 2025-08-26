@@ -68,7 +68,6 @@ const ProjectsSection = () => {
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={project.image}
-                    alt={project.title}
                     className={`w-full h-48 object-cover transition-transform duration-300 ${project.comingSoon ? 'opacity-70' : 'hover:scale-110'}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />

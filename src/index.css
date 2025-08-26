@@ -16,10 +16,10 @@
     --popover: 222 22% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 22% 6%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 222 22% 12%;
+    --secondary: 262 83% 58%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 222 22% 12%;
@@ -38,8 +38,8 @@
     --radius: 0.75rem;
 
     /* Portfolio specific colors */
-    --hero-gradient-from: 217 91% 60%;
-    --hero-gradient-to: 262 83% 58%;
+    --hero-gradient-from: 262 83% 58%;
+    --hero-gradient-to: 262 83% 68%;
     --skill-card-bg: 222 22% 10%;
     --skill-card-border: 222 22% 18%;
     --nav-bg: 222 22% 6%;
@@ -104,6 +104,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
   }
 }

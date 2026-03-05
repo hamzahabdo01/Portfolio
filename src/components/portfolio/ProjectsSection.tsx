@@ -2,38 +2,38 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
-import photo1 from '@/assets/image.png';
-// import photo3 from '@/assets/huma-kabakci-oRk4Ep65tRc-unsplash.jpg';
-import photo2 from '@/assets/ChatGPT Image Aug 26, 2025, 06_33_56 PM.png';
+import photo1 from '@/assets/Huda.png';
+import photo2 from '@/assets/ArifSource.png';
+import photo3 from '@/assets/WBS.png';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Real Estate Platform',
-      description: 'Full-stack real estate solution built with React and Supabase, featuring real-time property management and advanced analytics.',
+      title: 'Huda Engineering PLC',
+      description: 'Real Estate platform, featuring real-time property management and advanced analytics.',
       techStack: ['React', 'Supabase', 'Tailwind CSS'],
       image: photo1,
-      demoUrl: 'https://huda-engineering-plc.netlify.app',
+      demoUrl: 'https://hudaengineering.com',
       githubUrl: 'https://github.com/hamzahabdo01',
       comingSoon: false
     },
     {
-      title: 'Mobile E-Commerce',
+      title: 'ArifSource',
       description: 'Collaborative e-commerce tool with real-time updates, team collaboration features, and comprehensive reporting dashboard.',
-      techStack: ['React', 'Next.js', 'Firebase'],
+      techStack: ['Vue.js', 'Laravel', 'MySQL', 'Pusher'],
       image: photo2,
-      demoUrl: 'https://sukoch.netlify.app',
+      demoUrl: 'https://arifsource.com',
       githubUrl: 'https://github.com/hamzahabdo01',
       comingSoon: false
     },
     {
-      title: 'Blockchain Escrow System',
+      title: 'Women Beyond Silence',
       description: 'Decentralized application for secure document management and verification using blockchain technology.',
-      techStack: ['React', 'Golang', 'MySQL', 'Ethereum'],
-      image: '',
-      demoUrl: null,
-      githubUrl: null,
-      comingSoon: true
+      techStack: ['React', 'Lovable'],
+      image: photo3,
+      demoUrl: 'https://womenbeyondsilence.com',
+      githubUrl: 'https://github.com/hamzahabdo01',
+      comingSoon: false
     }
   ];
 
@@ -68,7 +68,7 @@ const ProjectsSection = () => {
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={project.image}
-                    className={`w-full h-48 object-cover transition-transform duration-300 ${project.comingSoon ? 'opacity-70' : 'hover:scale-110'}`}
+                    className={`w-full h-64 object-cover transition-transform duration-300 ${project.comingSoon ? 'opacity-70' : 'hover:scale-110'}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   {project.comingSoon && (

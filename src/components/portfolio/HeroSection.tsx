@@ -1,145 +1,80 @@
-import { motion } from "framer-motion";
-import { Github, User, Briefcase, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import profileImage from "@/assets/photo_2025-10-31_16-24-00 (1).png";
+import { ArrowRight, CheckCircle } from "lucide-react";
+import profilePic from "../../assets/photo_2025-10-31_16-24-00 (1).png";
+
+const stats = [
+  { value: "50+", label: "Projects Delivered" },
+  { value: "3+", label: "Years Experience" },
+  { value: "98%", label: "Client Satisfaction" },
+];
 
 const HeroSection = () => {
-  const socialLinks = [
-    { icon: Github, href: "https://github.com/hamzahabdo01", label: "GitHub" },
-    {
-      icon: Linkedin,
-      href: "https://www.linkedin.com/in/hamzah-abdo-0943b6361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      label: "Linkedin",
-    },
-    {
-      icon: Briefcase,
-      href: "https://www.upwork.com/freelancers/~01c02c39f2acabd445",
-      label: "Upwork",
-    },
-  ];
-
-  const testimonialAvatars = [
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=John",
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Jane",
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Mike",
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-    "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
-  ];
-
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center relative overflow-hidden"
+      className="relative min-h-[110vh] flex items-center justify-center overflow-hidden py-20"
     >
-      <div className="absolute inset-0 bg-gradient-radial opacity-50"></div>
+      {/* Background effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-[hsl(245_80%_67%/0.08)] blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[hsl(280_70%_55%/0.06)] blur-[100px]" />
+      </div>
 
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8 order-2 lg:order-1"
-          >
-            <div className="space-y-4 text-center lg:text-left">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-3xl md:text-6xl font-bold"
-              >
-                <span className="block gradient-text">
-                  Full Stack Developer
-                </span>
-              </motion.h1>
+      <div className="container-tight relative z-10 w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+          {/* Left Column: Content */}
+          <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
+            {/* Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
+              I build apps that help startups{" "}
+              <span className="gradient-text">scale fast</span> and make money
+            </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-md text-muted-foreground max-w-2xl leading-relaxed"
-              >
-                My goal is to write clean, maintainable code that enhances the
-                development process and makes coding enjoyable through
-                structured and thoughtful practices.
-              </motion.p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-16">
+              <a href="#contact" className="btn-primary inline-flex items-center gap-2 group">
+                Get Your App Built
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a href="#case-studies" className="btn-secondary inline-flex items-center gap-2">
+                See My Work
+              </a>
             </div>
 
-            {/* Testimonial */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="space-y-4"
-            >
-              <div className="flex items-center space-x-2 justify-center lg:justify-start">
-                {testimonialAvatars.map((avatar, index) => (
-                  <motion.img
-                    key={index}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 1 + index * 0.1 }}
-                    src={avatar}
-                    alt="Team member"
-                    className="w-10 h-10 rounded-full border-2 border-border hover:border-primary transition-colors duration-200"
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right side - Profile Image & Social Icons */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative flex flex-col items-center space-y-8 order-1 lg:order-2"
-          >
-            <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
-              className="relative"
-            >
-              <div className="w-80 h-80 rounded-full gradient-border p-1 animate-glow">
-                <img
-                  src={profileImage}
-                  alt="Hamzah Abdo"
-                  className="w-full h-full rounded-full object-cover"
-                />
-              </div>
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30"
-              />
-            </motion.div>
-
-            {/* Social Icons */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="flex flex-wrap justify-center gap-4"
-            >
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1.2 + index * 0.1 }}
-                  className="p-3 bg-card border border-border rounded-lg hover:border-primary hover:shadow-primary hover:bg-primary transition-all duration-300 hover:scale-110"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5 text-foreground transition-colors" />
-                </motion.a>
+            {/* Social proof stats */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-8 md:gap-12">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-2xl md:text-3xl font-bold font-display gradient-text">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-white/40 mt-1">{stat.label}</div>
+                </div>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
+
+          {/* Right Column: Profile Picture */}
+          <div className="flex-1 flex justify-center lg:justify-end order-1 lg:order-2 w-full max-w-[450px] lg:max-w-none">
+            <div className="relative group w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[400px]">
+              {/* Glow backing */}
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
+
+              <div className="relative p-2 sm:p-3 rounded-[32px] sm:rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-sm shadow-card hover:bg-white/10 transition-colors duration-500 overflow-hidden">
+                <img
+                  src={profilePic}
+                  alt="Hamzah Abdo Profile"
+                  className="w-full aspect-square object-cover rounded-[24px] sm:rounded-[32px] shadow-2xl transition duration-500 group-hover:scale-[1.02]"
+                />
+
+                {/* Trust Badge overlay */}
+                <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 flex items-center gap-2 py-1.5 px-3 sm:py-2 sm:px-4 rounded-full bg-background/80 border border-white/10 backdrop-blur-md shadow-lg">
+                  <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white/80 whitespace-nowrap">Available for Hire</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

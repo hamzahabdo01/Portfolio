@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import profilePic from "../../assets/photo_2025-10-31_16-24-00 (1).png";
 
 const stats = [
-  { value: "50+", label: "Projects Delivered" },
+  { value: "5+", label: "Projects Delivered" },
   { value: "3+", label: "Years Experience" },
   { value: "98%", label: "Client Satisfaction" },
 ];

@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Inter', 'system-ui', 'sans-serif'],
-				'display': ['Space Grotesk', 'Inter', 'sans-serif'],
+				'sans': ['Syne', 'system-ui', 'sans-serif'],
+				'display': ['Syne', '"Plus Jakarta Sans"', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -87,10 +87,10 @@ export default {
 					'0%, 100%': { transform: 'translateY(0px)' },
 					'50%': { transform: 'translateY(-10px)' }
 				},
-				fadeIn: {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
-					'100%': { opacity: '1', transform: 'translateY(0)' }
-				},
+fadeIn: {
+				'0%': { opacity: '0', transform: 'translateY(20px)' },
+				'100%': { opacity: '1', transform: 'translateY(0)' }
+			},
 				pulse: {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.6' }

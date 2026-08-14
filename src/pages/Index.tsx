@@ -1,25 +1,29 @@
-import Navigation from "@/components/portfolio/Navigation";
+import { useEffect } from "react";
+import BioSection from "@/components/portfolio/BioSection";
 import HeroSection from "@/components/portfolio/HeroSection";
-import ProblemSolutionSection from "@/components/portfolio/ProblemSolutionSection";
-import CaseStudiesSection from "@/components/portfolio/CaseStudiesSection";
-import ServicesSection from "@/components/portfolio/ServicesSection";
-import ProcessSection from "@/components/portfolio/ProcessSection";
-import CTASection from "@/components/portfolio/CTASection";
+import Navigation from "@/components/portfolio/Navigation";
+import WorkSection from "@/components/portfolio/WorkSection";
 import Footer from "@/components/portfolio/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-white">
-      <div className="noise" />
+    <div
+      id="page-scroll"
+      className="h-dvh snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth overscroll-y-contain"
+    >
       <Navigation />
-      <main>
-        <HeroSection />
-        <ProblemSolutionSection />
-        <CaseStudiesSection />
-        <ServicesSection />
-        <ProcessSection />
-        <CTASection />
-      </main>
+      <HeroSection />
+      <BioSection />
+      <WorkSection />
       <Footer />
     </div>
   );

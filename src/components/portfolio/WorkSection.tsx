@@ -52,13 +52,13 @@ const WorkSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="work" className="flex h-dvh shrink-0 snap-start snap-always flex-col justify-start overflow-hidden bg-[#f7f4f1] px-5 pt-16 pb-6 text-black sm:px-8 lg:h-dvh lg:overflow-hidden lg:px-10 lg:pt-24 lg:pb-8">
+    <section id="work" className="flex min-h-dvh shrink-0 snap-start snap-always flex-col justify-start overflow-y-auto bg-[#f7f4f1] px-5 pt-24 pb-8 text-black sm:px-8 lg:h-dvh lg:overflow-hidden lg:px-10">
       <div className="mx-auto w-full max-w-[1600px]">
-        <h2 className="mb-4 text-[clamp(2.5rem,5.5vw,6rem)] font-bold tracking-[-0.08em] leading-none lg:mb-10 lg:text-[clamp(3.5rem,7vw,7.5rem)]">
+        <h2 className="text-[clamp(3rem,6vw,6rem)] font-bold tracking-[-0.08em] leading-none mb-6 lg:text-[clamp(3.5rem,7vw,7.5rem)] lg:mb-10">
           Work
         </h2>
 
-        <div className="flex flex-col gap-4 sm:gap-4" onMouseLeave={() => setActiveIndex(null)}>
+        <div className="flex flex-col gap-5 sm:gap-4" onMouseLeave={() => setActiveIndex(null)}>
           {projects.map((project, index) => {
             const isActive = activeIndex === index;
             return (
@@ -71,7 +71,7 @@ const WorkSection = () => {
                 {/* Project Name */}
                 <div className="w-full sm:w-1/3">
                   <h3
-                    className={`text-[1.45rem] font-bold tracking-tight transition-all duration-500 ease-out sm:text-3xl lg:text-4xl ${
+                    className={`text-[1.7rem] font-bold tracking-tight transition-all duration-500 ease-out sm:text-3xl lg:text-4xl ${
                       isActive ? "translate-x-3 text-black" : "translate-x-0 text-[#a3a3a3]"
                     }`}
                   >
@@ -80,7 +80,7 @@ const WorkSection = () => {
                 </div>
 
                 {/* Mobile: tags (left) + category (far right) */}
-                <div className="flex w-full items-center justify-between sm:hidden">
+                <div className="flex w-full min-h-[2.5rem] items-center justify-between sm:hidden">
                   <p
                     className={`text-[10px] font-normal transition-colors duration-300 ${
                       isActive ? "text-black" : "text-[#a3a3a3]"

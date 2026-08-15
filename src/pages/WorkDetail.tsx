@@ -130,7 +130,7 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
       </div>
 
       {/* Right column — devices top, text bottom */}
-      <div className="flex min-h-0 flex-1 flex-col gap-4 lg:justify-between lg:gap-8">
+      <div className="flex min-h-0 flex-1 flex-col justify-between gap-3 lg:gap-8">
         <div className="flex w-full items-stretch gap-3 sm:gap-4">
           <div className="flex h-[7rem] min-w-0 flex-1 items-center justify-center self-center overflow-hidden rounded-xl bg-black sm:h-auto sm:self-stretch">
             <img
@@ -209,13 +209,13 @@ const WorkDetail = () => {
   return (
     <div className="flex h-dvh flex-col overflow-hidden bg-[#f7f4f1] text-black lg:h-screen">
       {/* Navigation */}
-      <nav className="fixed inset-x-0 top-0 z-50 bg-[#f7f4f1] px-5 py-4 backdrop-blur-sm sm:px-8 lg:px-10">
+      <nav className="fixed inset-x-0 top-0 z-50 bg-[#f7f4f1]/95 px-5 py-5 backdrop-blur-sm sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-[1600px] items-center justify-between text-[11px] font-bold uppercase tracking-[-0.04em]">
           <div className="flex items-center gap-6">
-            <a href="/" className="pb-0.5 border-b border-transparent opacity-60 transition-opacity hover:opacity-100">Bio</a>
-            <a href="/#work" className="pb-0.5 border-b border-black opacity-100">Work</a>
+            <a href="/" className="flex min-h-[44px] items-center transition-opacity hover:opacity-55">Bio</a>
+            <a href="/#work" className="flex min-h-[44px] items-center border-b border-black pb-0.5">Work</a>
           </div>
-          <a href="/#contact" className="pb-0.5 border-b border-transparent opacity-60 transition-opacity hover:opacity-100">Contact</a>
+          <a href="/#contact" className="flex min-h-[44px] items-center transition-opacity hover:opacity-55">Contact</a>
         </div>
       </nav>
 

@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import Navigation from "@/components/portfolio/Navigation";
 import arifsourceLaptop from "../assets/arifsource/arifsource-laptop.webp";
 import arifsourceIpad from "../assets/arifsource/arifsource-ipad.webp";
 import arifsourceMobileOne from "../assets/arifsource/arifsource-mobile-one.webp";
@@ -119,9 +120,9 @@ const projectsData: Record<string, Project> = {
 
 const WorkDetailLayout = ({ project }: { project: Project }) => (
   <section className="flex min-h-0 flex-1 px-5 pt-3 pb-4 sm:px-8 sm:pb-6 lg:px-10">
-    <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col gap-2 sm:gap-4 lg:flex-row lg:items-stretch lg:gap-5">
+    <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col justify-center gap-2 sm:gap-4 lg:flex-row lg:items-stretch lg:justify-start lg:gap-5">
       {/* Laptop — left */}
-      <div className="relative flex h-[clamp(130px,28dvh,200px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
+      <div className="relative flex h-[clamp(160px,32dvh,240px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
         <img
           src={project.laptop}
           alt={`${project.name} laptop view`}
@@ -130,9 +131,9 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
       </div>
 
       {/* Right column — devices top, text bottom */}
-      <div className="flex min-h-0 flex-1 flex-col justify-between gap-3 lg:gap-8">
+      <div className="flex min-h-0 flex-col gap-3 lg:flex-1 lg:justify-between lg:gap-8">
         <div className="flex w-full items-stretch gap-3 sm:gap-4">
-          <div className="flex h-[7rem] min-w-0 flex-1 items-center justify-center self-center overflow-hidden rounded-xl bg-black sm:h-auto sm:self-stretch">
+          <div className="flex h-[9rem] min-w-0 flex-1 items-center justify-center self-center overflow-hidden rounded-xl bg-black sm:h-auto sm:self-stretch">
             <img
               src={project.ipad}
               alt={`${project.name} ipad mockup`}
@@ -141,7 +142,7 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
           </div>
 
           <div className="flex shrink-0 flex-col gap-3 sm:gap-4">
-            <div className="flex h-[7rem] w-[5.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
+            <div className="flex h-[9rem] w-[6.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
               <img
                 src={project.mobileOne}
                 alt={`${project.name} mobile mockup 1`}
@@ -149,7 +150,7 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
               />
             </div>
 
-            <div className="hidden h-[7rem] w-[5.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:flex sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
+            <div className="hidden h-[9rem] w-[6.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:flex sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
               <img
                 src={project.mobileTwo}
                 alt={`${project.name} mobile mockup 2`}
@@ -208,16 +209,7 @@ const WorkDetail = () => {
 
   return (
     <div className="flex h-dvh flex-col overflow-hidden bg-[#f7f4f1] text-black lg:h-screen">
-      {/* Navigation */}
-      <nav className="fixed inset-x-0 top-0 z-50 bg-[#f7f4f1]/95 px-5 py-5 backdrop-blur-sm sm:px-8 lg:px-10">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between text-[11px] font-bold uppercase tracking-[-0.04em]">
-          <div className="flex items-center gap-6">
-            <a href="/" className="flex min-h-[44px] items-center transition-opacity hover:opacity-55">Bio</a>
-            <a href="/#work" className="flex min-h-[44px] items-center border-b border-black pb-0.5">Work</a>
-          </div>
-          <a href="/#contact" className="flex min-h-[44px] items-center transition-opacity hover:opacity-55">Contact</a>
-        </div>
-      </nav>
+      <Navigation initialActiveId="work" />
 
       <main className="flex min-h-0 flex-1 flex-col pt-16 sm:pt-20">
         <WorkDetailLayout project={project} />

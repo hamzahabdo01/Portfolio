@@ -1,16 +1,18 @@
-import { useState, useEffect } from "react";
-
-const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-  event.preventDefault();
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-};
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const sectionIds = ["hero", "bio", "work", "contact"];
 
-const Navigation = () => {
-  const [activeId, setActiveId] = useState("hero");
+const Navigation = ({ initialActiveId = "hero" }: { initialActiveId?: string }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [activeId, setActiveId] = useState(initialActiveId);
+
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
+    if (!isHome) return;
+
     const scrollRoot = document.getElementById("page-scroll");
     if (!scrollRoot) return;
 
@@ -40,7 +42,28 @@ const Navigation = () => {
     handleScroll();
 
     return () => scrollRoot.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHome]);
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const id = location.hash.replace("#", "");
+    const timer = setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }, 80);
+
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (isHome && document.getElementById(id)) {
+      event.preventDefault();
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      window.history.replaceState(null, "", location.pathname);
+    } else {
+      navigate(`/#${id}`);
+    }
+  };
 
   const isDark = activeId === "contact";
 

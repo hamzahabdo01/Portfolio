@@ -58,7 +58,7 @@ const WorkSection = () => {
           Work
         </h2>
 
-        <div className="flex flex-col gap-16 sm:gap-4" onMouseLeave={() => setActiveIndex(null)}>
+        <div className="flex flex-col gap-8 sm:gap-4" onMouseLeave={() => setActiveIndex(null)}>
           {projects.map((project, index) => {
             const isActive = activeIndex === index;
             return (

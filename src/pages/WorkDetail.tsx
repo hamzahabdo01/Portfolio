@@ -121,7 +121,7 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
   <section className="flex min-h-0 flex-1 px-5 pt-4 pb-5 sm:px-8 sm:pb-6 lg:px-10">
     <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-5">
       {/* Laptop — left */}
-      <div className="relative flex h-[350px] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
+      <div className="relative flex h-[clamp(240px,42dvh,350px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
         <img
           src={project.laptop}
           alt={`${project.name} laptop view`}
@@ -169,7 +169,7 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full border border-black/20 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[-0.04em] transition-colors hover:border-black hover:bg-black hover:text-white"
+              className="inline-flex min-h-[44px] shrink-0 items-center gap-2 rounded-full border border-black/20 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[-0.04em] transition-colors hover:border-black hover:bg-black hover:text-white"
             >
               Visit site
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -207,15 +207,15 @@ const WorkDetail = () => {
   }
 
   return (
-    <div className="flex h-screen flex-col overflow-hidden bg-[#f7f4f1] text-black">
+    <div className="flex min-h-screen flex-col bg-[#f7f4f1] text-black lg:h-screen lg:overflow-hidden">
       {/* Navigation */}
       <nav className="fixed inset-x-0 top-0 z-50 bg-[#f7f4f1]/95 px-5 py-5 backdrop-blur-sm sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-[1600px] items-center justify-between text-[11px] font-bold uppercase tracking-[-0.04em]">
           <div className="flex items-center gap-6">
-            <a href="/" className="transition-opacity hover:opacity-55">Bio</a>
-            <a href="/#work" className="border-b border-black pb-0.5">Work</a>
+            <a href="/" className="flex min-h-[44px] items-center transition-opacity hover:opacity-55">Bio</a>
+            <a href="/#work" className="flex min-h-[44px] items-center border-b border-black pb-0.5">Work</a>
           </div>
-          <a href="contact" className="transition-opacity hover:opacity-55">Contact</a>
+          <a href="/#contact" className="flex min-h-[44px] items-center transition-opacity hover:opacity-55">Contact</a>
         </div>
       </nav>
 

@@ -52,7 +52,7 @@ const WorkSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="work" className="flex h-dvh shrink-0 snap-start snap-always flex-col justify-start overflow-hidden bg-[#f7f4f1] px-5 pt-24 pb-8 text-black sm:px-8 lg:px-10">
+    <section id="work" className="flex min-h-dvh shrink-0 snap-start snap-always flex-col justify-start overflow-y-auto bg-[#f7f4f1] px-5 pt-24 pb-8 text-black sm:px-8 lg:h-dvh lg:overflow-hidden lg:px-10">
       <div className="mx-auto w-full max-w-[1600px]">
         <h2 className="text-[clamp(3rem,6vw,6rem)] font-bold tracking-[-0.08em] leading-none mb-6 lg:text-[clamp(3.5rem,7vw,7.5rem)] lg:mb-10">
           Work

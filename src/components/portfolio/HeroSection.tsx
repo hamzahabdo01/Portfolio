@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Copyright } from "lucide-react";
-import portrait from "../../assets/hero/hamzah-portrait.png";
+import portrait from "../../assets/hero/hamzah-portrait.webp";
 import logo from "../../assets/hero/hamzah-logo.png";
 
 const creativeWords = ["Creative", "Inspired", "Building", "Refining"];
@@ -29,7 +29,7 @@ const HeroSection = () => {
             alt="Illustrated portrait of Hamzah Abdo"
             className="h-32 w-32 rounded-full object-cover sm:h-48 sm:w-48"
           />
-          <h1 className="mt-8 flex items-baseline justify-center text-center text-[clamp(2.8rem,11vw,10rem)] font-bold leading-[0.73] tracking-[-0.095em] sm:mt-12">
+          <h1 className="mt-8 flex items-baseline justify-center text-center text-[clamp(2rem,10.5vw,10rem)] font-bold leading-[0.73] tracking-[-0.095em] sm:mt-12">
             <span className="relative inline-block">
               <span
                 aria-hidden

@@ -123,60 +123,11 @@
 
 /* Utility classes */
 @layer components {
-  .noise {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.05;
-    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-    filter: contrast(120%) brightness(120%);
-  }
-
   .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-
-  .gradient-border {
-    position: relative;
-    border: 1px solid transparent;
-    background-clip: padding-box;
-  }
-
-  .gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    background: var(--gradient-primary);
-    z-index: -1;
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-  }
-
-  .gradient-border:hover::before {
-    opacity: 0.7;
-  }
-
-  .glass {
-    background: hsl(var(--card) / 0.6);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid hsl(var(--border) / 0.5);
-  }
-
-  .section-padding {
-    @apply px-5 md:px-8 lg:px-16 py-20 md:py-28;
-  }
-
-  .container-tight {
-    @apply max-w-6xl mx-auto;
   }
 
   .btn-primary {
@@ -188,22 +139,6 @@
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 40px hsl(35 95% 58% / 0.4);
-  }
-
-  .btn-secondary {
-    @apply border border-white/15 text-white/80 font-medium px-7 py-3.5 rounded-xl transition-all duration-300 hover:border-white/30 hover:text-white hover:bg-white/5;
-  }
-
-  /* Fade-in animation for scroll */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
   }
 
   .animate-slide-up {

@@ -2,10 +2,10 @@ import portrait from "../../assets/hero/hamza-child.webp";
 
 const BioSection = () => {
   return (
-    <section id="bio" className="flex min-h-dvh shrink-0 snap-start snap-always flex-col justify-start overflow-y-auto bg-[#f7f4f1] px-5 pb-8 pt-24 text-black sm:px-8 lg:h-dvh lg:overflow-hidden lg:px-10">
-      <div className="mx-auto max-w-[1600px]">
+    <section id="bio" className="flex h-dvh shrink-0 snap-start snap-always flex-col justify-start overflow-hidden bg-[#f7f4f1] px-5 pt-16 pb-6 text-black sm:px-8 lg:px-10 lg:pt-24 lg:pb-8">
+      <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col">
         {/* Mobile / tablet view */}
-        <div className="flex flex-col gap-8 lg:hidden">
+        <div className="flex flex-1 flex-col justify-center gap-3 lg:hidden">
           <div className="flex items-start">
             <h2 className="text-[clamp(4.5rem,9.5vw,9.5rem)] font-bold italic leading-[0.78] tracking-[-0.1em]">Hey!</h2>
             <span className="relative ml-2 mt-7 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#f6b94d] text-3xl font-normal leading-none text-[#f6b94d] sm:h-20 sm:w-20 sm:text-4xl">
@@ -15,7 +15,7 @@ const BioSection = () => {
             </span>
           </div>
 
-          <div className="text-sm font-semibold leading-[1.8] tracking-[-0.04em] [word-spacing:0.2em]">
+          <div className="text-sm font-semibold leading-[1.7] tracking-[-0.04em] [word-spacing:0.18em] sm:leading-[1.8]">
             <p>
               I am a Software Engineer with over 2 years of experience. I have worked with multiple sectors and had the privilege of collaborating with exceptional entrepreneurs.
             </p>
@@ -25,7 +25,7 @@ const BioSection = () => {
           </div>
 
           <div className="relative mx-auto w-full max-w-[600px]">
-            <img src={portrait} alt="Illustrated portrait of Hamzah Abdo" className="h-auto w-full rounded-[2rem]" />
+            <img src={portrait} alt="Illustrated portrait of Hamzah Abdo" className="mx-auto h-[28dvh] w-auto rounded-[2rem] object-contain sm:h-[34dvh]" />
           </div>
 
           <p className="hidden text-[clamp(1.3rem,2vw,2rem)] font-semibold leading-[1.02] tracking-[-0.065em]">

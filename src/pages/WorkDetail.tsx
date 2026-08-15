@@ -118,10 +118,10 @@ const projectsData: Record<string, Project> = {
 };
 
 const WorkDetailLayout = ({ project }: { project: Project }) => (
-  <section className="flex min-h-0 flex-1 px-5 pt-4 pb-5 sm:px-8 sm:pb-6 lg:px-10">
-    <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-5">
+  <section className="flex min-h-0 flex-1 px-5 pt-3 pb-4 sm:px-8 sm:pb-6 lg:px-10">
+    <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col gap-3 lg:flex-row lg:items-stretch lg:gap-5">
       {/* Laptop — left */}
-      <div className="relative flex h-[clamp(240px,42dvh,350px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
+      <div className="relative flex h-[clamp(160px,32dvh,240px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
         <img
           src={project.laptop}
           alt={`${project.name} laptop view`}
@@ -130,9 +130,9 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
       </div>
 
       {/* Right column — devices top, text bottom */}
-      <div className="flex min-h-0 flex-1 flex-col justify-between gap-6 lg:gap-8">
+      <div className="flex min-h-0 flex-1 flex-col justify-between gap-3 lg:gap-8">
         <div className="flex w-full items-stretch gap-3 sm:gap-4">
-          <div className="flex h-[8.75rem] min-w-0 flex-1 items-center justify-center self-center overflow-hidden rounded-xl bg-black sm:h-auto sm:self-stretch">
+          <div className="flex h-[7rem] min-w-0 flex-1 items-center justify-center self-center overflow-hidden rounded-xl bg-black sm:h-auto sm:self-stretch">
             <img
               src={project.ipad}
               alt={`${project.name} ipad mockup`}
@@ -141,7 +141,7 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
           </div>
 
           <div className="flex shrink-0 flex-col gap-3 sm:gap-4">
-            <div className="flex h-[8.75rem] w-[6.75rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
+            <div className="flex h-[7rem] w-[5.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
               <img
                 src={project.mobileOne}
                 alt={`${project.name} mobile mockup 1`}
@@ -149,7 +149,7 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
               />
             </div>
 
-            <div className="hidden h-[8.75rem] w-[6.75rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:flex sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
+            <div className="hidden h-[7rem] w-[5.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:flex sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
               <img
                 src={project.mobileTwo}
                 alt={`${project.name} mobile mockup 2`}
@@ -164,7 +164,7 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
             {project.description}
           </p>
 
-          <div className="mt-6 flex items-end justify-between gap-3 sm:mt-5 lg:ml-auto lg:justify-end">
+          <div className="mt-4 flex items-end justify-between gap-3 sm:mt-5 lg:ml-auto lg:justify-end">
             <a
               href={project.url}
               target="_blank"

@@ -119,9 +119,9 @@ const projectsData: Record<string, Project> = {
 
 const WorkDetailLayout = ({ project }: { project: Project }) => (
   <section className="flex min-h-0 flex-1 px-5 pt-3 pb-4 sm:px-8 sm:pb-6 lg:px-10">
-    <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col gap-3 lg:flex-row lg:items-stretch lg:gap-5">
+    <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col gap-2 sm:gap-4 lg:flex-row lg:items-stretch lg:gap-5">
       {/* Laptop — left */}
-      <div className="relative flex h-[clamp(160px,32dvh,240px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
+      <div className="relative flex h-[clamp(130px,28dvh,200px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
         <img
           src={project.laptop}
           alt={`${project.name} laptop view`}
@@ -207,7 +207,7 @@ const WorkDetail = () => {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#f7f4f1] text-black lg:h-screen lg:overflow-hidden">
+    <div className="flex h-dvh flex-col overflow-hidden bg-[#f7f4f1] text-black lg:h-screen">
       {/* Navigation */}
       <nav className="fixed inset-x-0 top-0 z-50 bg-[#f7f4f1]/95 px-5 py-5 backdrop-blur-sm sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-[1600px] items-center justify-between text-[11px] font-bold uppercase tracking-[-0.04em]">

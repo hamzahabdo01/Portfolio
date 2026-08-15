@@ -49,7 +49,7 @@ const Navigation = () => {
       className={`fixed inset-x-0 top-0 z-50 px-5 py-4 backdrop-blur-sm sm:px-8 lg:px-10 transition-colors duration-300 ${
         isDark
           ? "bg-black text-white"
-          : "bg-[#f7f4f1] text-black"
+          : "bg-transparent text-black"
       }`}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between text-[11px] font-bold uppercase tracking-[-0.04em]">

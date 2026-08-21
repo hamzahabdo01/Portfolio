@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SkeletonImage from "@/components/ui/SkeletonImage";
 import arifsourceLaptop from "../../assets/arifsource/arifsource-laptop.webp";
 import fanosLaptop from "../../assets/fanos/fanos-laptop.webp";
 import hudaLaptop from "../../assets/huda/huda-laptop.webp";
@@ -126,7 +127,7 @@ const WorkSection = () => {
                         : "pointer-events-none -translate-y-1/2 translate-x-6 scale-75 opacity-0"
                     }`}
                   >
-                    <img
+                    <SkeletonImage
                       src={project.image}
                       alt={project.name}
                       className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-110"

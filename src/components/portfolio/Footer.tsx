@@ -1,3 +1,4 @@
+import SkeletonImage from "@/components/ui/SkeletonImage";
 import portrait from "../../assets/hero/hamzah-portrait.webp";
 import { Github, Send } from "lucide-react";
 
@@ -57,7 +58,7 @@ const Footer = () => {
               <h3 className="mb-5 text-base font-semibold">/Contact</h3>
               <div className="flex items-start gap-4 sm:block">
                 <div className="h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-white/20 sm:hidden">
-                  <img
+                  <SkeletonImage
                     src={portrait}
                     alt="Hamzah Abdo"
                     className="h-full w-full object-cover"
@@ -84,7 +85,7 @@ const Footer = () => {
         <div className="shrink-0 border-t border-white/10 py-1.5 sm:py-3">
           <div className="flex items-center justify-center gap-4 sm:justify-start sm:gap-6">
             <div className="hidden h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-white/20 sm:block sm:h-44 sm:w-44">
-              <img
+              <SkeletonImage
                 src={portrait}
                 alt="Hamzah Abdo"
                 className="h-full w-full object-cover"

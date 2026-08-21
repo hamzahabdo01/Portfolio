@@ -1,3 +1,4 @@
+import SkeletonImage from "@/components/ui/SkeletonImage";
 import portrait from "../../assets/hero/hamza-child.webp";
 
 const BioSection = () => {
@@ -25,7 +26,7 @@ const BioSection = () => {
           </div>
 
           <div className="relative mx-auto w-full max-w-[600px]">
-            <img src={portrait} alt="Illustrated portrait of Hamzah Abdo" className="mx-auto h-[28dvh] w-auto rounded-[2rem] object-contain sm:h-[34dvh]" />
+            <SkeletonImage src={portrait} alt="Illustrated portrait of Hamzah Abdo" className="mx-auto h-[28dvh] w-auto rounded-[2rem] object-contain sm:h-[34dvh]" />
           </div>
 
           <p className="hidden text-[clamp(1.3rem,2vw,2rem)] font-semibold leading-[1.02] tracking-[-0.065em]">

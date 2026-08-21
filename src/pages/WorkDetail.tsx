@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import SkeletonImage from "@/components/ui/SkeletonImage";
 import Navigation from "@/components/portfolio/Navigation";
 import arifsourceLaptop from "../assets/arifsource/arifsource-laptop.webp";
 import arifsourceIpad from "../assets/arifsource/arifsource-ipad.webp";
@@ -118,47 +120,53 @@ const projectsData: Record<string, Project> = {
   },
 };
 
-const WorkDetailLayout = ({ project }: { project: Project }) => (
-  <section className="flex min-h-0 flex-1 px-5 pt-3 pb-4 sm:px-8 sm:pb-6 lg:px-10">
-    <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col justify-center gap-2 sm:gap-4 lg:flex-row lg:items-stretch lg:justify-start lg:gap-5">
-      {/* Laptop — left */}
-      <div className="relative flex h-[clamp(160px,32dvh,240px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
-        <img
-          src={project.laptop}
-          alt={`${project.name} laptop view`}
-          className="relative z-10 h-[88%] w-auto max-w-[92%] translate-y-4 object-contain sm:h-[90%] sm:translate-y-6"
-        />
-      </div>
+const WorkDetailLayout = ({ project }: { project: Project }) => {
+  const [laptopLoaded, setLaptopLoaded] = useState(false);
 
-      {/* Right column — devices top, text bottom */}
-      <div className="flex min-h-0 flex-col gap-3 lg:flex-1 lg:justify-between lg:gap-8">
-        <div className="flex w-full items-stretch gap-3 sm:gap-4">
-          <div className="flex h-[9rem] min-w-0 flex-1 items-center justify-center self-center overflow-hidden rounded-xl bg-black sm:h-auto sm:self-stretch">
-            <img
-              src={project.ipad}
-              alt={`${project.name} ipad mockup`}
-              className="h-full w-full scale-[0.93] object-contain"
-            />
-          </div>
-
-          <div className="flex shrink-0 flex-col gap-3 sm:gap-4">
-            <div className="flex h-[9rem] w-[6.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
-              <img
-                src={project.mobileOne}
-                alt={`${project.name} mobile mockup 1`}
-                className="h-full w-full object-contain"
-              />
-            </div>
-
-            <div className="hidden h-[9rem] w-[6.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:flex sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
-              <img
-                src={project.mobileTwo}
-                alt={`${project.name} mobile mockup 2`}
-                className="h-full w-full object-contain"
-              />
-            </div>
-          </div>
+  return (
+    <section className="flex min-h-0 flex-1 px-5 pt-3 pb-4 sm:px-8 sm:pb-6 lg:px-10">
+      <div className="mx-auto flex min-h-0 w-full max-w-[1600px] flex-1 flex-col justify-center gap-2 sm:gap-4 lg:flex-row lg:items-stretch lg:justify-start lg:gap-5">
+        {/* Laptop — left */}
+        <div className="relative flex h-[clamp(160px,32dvh,240px)] flex-none items-center justify-center overflow-hidden rounded-2xl bg-black sm:h-[360px] lg:h-auto lg:min-h-0 lg:flex-1">
+          <img
+            src={project.laptop}
+            alt={`${project.name} laptop view`}
+            onLoad={() => setLaptopLoaded(true)}
+            className={`relative z-10 h-[88%] w-auto max-w-[92%] translate-y-4 object-contain transition-opacity duration-500 sm:h-[90%] sm:translate-y-6 ${
+              laptopLoaded ? "opacity-100" : "opacity-0"
+            }`}
+          />
         </div>
+
+        {/* Right column — devices top, text bottom */}
+        <div className="flex min-h-0 flex-col gap-3 lg:flex-1 lg:justify-between lg:gap-8">
+          <div className="flex w-full items-stretch gap-3 sm:gap-4">
+            <div className="flex h-[9rem] min-w-0 flex-1 items-center justify-center self-center overflow-hidden rounded-xl bg-black sm:h-auto sm:self-stretch">
+              <SkeletonImage
+                src={project.ipad}
+                alt={`${project.name} ipad mockup`}
+                className="h-full w-full scale-[0.93] object-contain"
+              />
+            </div>
+
+            <div className="flex shrink-0 flex-col gap-3 sm:gap-4">
+              <div className="flex h-[9rem] w-[6.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
+                <SkeletonImage
+                  src={project.mobileOne}
+                  alt={`${project.name} mobile mockup 1`}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+
+              <div className="hidden h-[9rem] w-[6.5rem] items-end justify-center overflow-hidden rounded-xl bg-black sm:flex sm:h-[9.75rem] sm:w-[7.75rem] lg:h-[11.75rem] lg:w-[9.75rem]">
+                <SkeletonImage
+                  src={project.mobileTwo}
+                  alt={`${project.name} mobile mockup 2`}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
 
         <div>
           <p className="text-sm sm:text-base font-normal leading-snug max-w-[480px] text-black/80 lg:ml-auto lg:text-right">
@@ -184,7 +192,8 @@ const WorkDetailLayout = ({ project }: { project: Project }) => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 const WorkDetail = () => {
   const { id } = useParams<{ id: string }>();

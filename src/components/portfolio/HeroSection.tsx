@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Copyright } from "lucide-react";
+import SkeletonImage from "@/components/ui/SkeletonImage";
 import portrait from "../../assets/hero/hamzah-portrait.webp";
 import logo from "../../assets/hero/hamzah-logo.png";
 
@@ -24,7 +25,7 @@ const HeroSection = () => {
       <div className="mx-auto flex h-[calc(100dvh-7.5rem)] max-w-[1600px] flex-col justify-between">
         {/* Mobile / tablet: vertical stack */}
         <div className="flex flex-1 flex-col items-center justify-center pb-40 lg:hidden">
-          <img
+          <SkeletonImage
             src={portrait}
             alt="Illustrated portrait of Hamzah Abdo"
             className="h-32 w-32 rounded-full object-cover sm:h-48 sm:w-48"
@@ -69,7 +70,7 @@ const HeroSection = () => {
             <span className="relative inline-block">
               <span className="relative z-10 -ml-[0.5em] inline-block origin-left scale-x-[1] tracking-[-0.055em]">is</span>
               <span className="absolute left-[0.6em] -top-[0.32em] -z-0 block h-[1.15em] w-[1.15em] overflow-hidden rounded-full border-[0.045em] border-black bg-black">
-                <img
+                <SkeletonImage
                   src={portrait}
                   alt="Illustrated portrait of Hamzah Abdo"
                   className="h-full w-full object-cover"
@@ -87,7 +88,7 @@ const HeroSection = () => {
           </div>
 
           <div className="w-[40px] shrink-0 overflow-hidden rounded-md sm:w-[60px] lg:absolute lg:bottom-3 lg:left-1/2 lg:w-[80px] lg:-translate-x-1/2">
-            <img src={logo} alt="Hamzah Abdo monogram" className=" w-full object-cover" />
+            <SkeletonImage src={logo} alt="Hamzah Abdo monogram" className=" w-full object-cover" />
           </div>
 
           <p className="max-w-[100px] text-right text-[9px] font-bold uppercase leading-tight tracking-[-0.04em] sm:max-w-none sm:text-xs">

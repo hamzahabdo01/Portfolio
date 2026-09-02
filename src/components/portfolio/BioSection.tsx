@@ -5,7 +5,7 @@ const BioSection = () => {
   return (
     <section
       id="bio"
-      className="relative flex h-dvh shrink-0 snap-start snap-always flex-col justify-center overflow-hidden bg-[#f7f4f1] px-5 py-6 text-black sm:px-8 sm:py-8 lg:px-10 lg:py-10"
+      className="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-[#f7f4f1] px-5 py-16 text-black sm:px-8 sm:py-20 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:px-10 lg:py-10"
     >
       <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col justify-center">
         {/* Mobile View */}

@@ -15,7 +15,7 @@ const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>, id: string)
 
 const Footer = () => {
   return (
-    <footer id="contact" className="flex h-dvh shrink-0 snap-start snap-always flex-col overflow-hidden bg-black text-white px-5 pt-14 pb-3 sm:px-8 sm:pt-16 lg:px-10">
+    <footer id="contact" className="flex min-h-dvh flex-col overflow-hidden bg-black text-white px-5 pt-14 pb-3 sm:px-8 sm:pt-16 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:px-10">
       <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col">
         {/* Main CTA */}
         <div className="flex flex-1 flex-col justify-center gap-6 lg:gap-10">

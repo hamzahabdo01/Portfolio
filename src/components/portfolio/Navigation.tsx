@@ -13,35 +13,29 @@ const Navigation = ({ initialActiveId = "hero" }: { initialActiveId?: string }) 
   useEffect(() => {
     if (!isHome) return;
 
-    const scrollRoot = document.getElementById("page-scroll");
-    if (!scrollRoot) return;
+    const observers: IntersectionObserver[] = [];
 
-    const handleScroll = () => {
-      const scrollTop = scrollRoot.scrollTop;
-      const scrollHeight = scrollRoot.scrollHeight;
-      const clientHeight = scrollRoot.clientHeight;
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
 
-      if (scrollHeight - scrollTop - clientHeight < 10) {
-        setActiveId("contact");
-        return;
-      }
-
-      let current = "hero";
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= clientHeight * 0.5) {
-          current = id;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveId(id);
+          }
+        },
+        {
+          root: document.getElementById("page-scroll"),
+          threshold: 0.35,
         }
-      }
-      setActiveId(current);
-    };
+      );
 
-    scrollRoot.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+      observer.observe(el);
+      observers.push(observer);
+    });
 
-    return () => scrollRoot.removeEventListener("scroll", handleScroll);
+    return () => observers.forEach((o) => o.disconnect());
   }, [isHome]);
 
   useEffect(() => {

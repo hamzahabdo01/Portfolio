@@ -53,13 +53,13 @@ const WorkSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="work" className="flex h-dvh shrink-0 snap-start snap-always flex-col justify-start overflow-hidden bg-[#f7f4f1] px-5 pt-16 pb-4 text-black sm:px-8 lg:h-dvh lg:overflow-hidden lg:pt-20 lg:px-10 lg:pb-8">
-      <div className="mx-auto w-full max-w-[1600px]">
-        <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold tracking-[-0.08em] leading-none mb-3 sm:text-[clamp(2.5rem,5.5vw,5.5rem)] sm:mb-4 lg:text-[clamp(3.2rem,5.5vw,5.5rem)] lg:mb-6">
+    <section id="work" className="flex h-dvh shrink-0 snap-start snap-always flex-col justify-between overflow-hidden bg-[#f7f4f1] px-5 pt-16 pb-20 text-black sm:px-8 sm:pb-8 lg:h-dvh lg:overflow-hidden lg:pt-20 lg:px-10 lg:pb-8">
+      <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col justify-between">
+        <h2 className="text-3xl font-bold tracking-[-0.08em] leading-none mb-1 sm:text-4xl sm:mb-3 lg:text-[clamp(3.2rem,5.5vw,5.5rem)] lg:mb-6">
           Work
         </h2>
 
-        <div className="flex flex-col gap-4 sm:gap-2.5 lg:gap-4 xl:gap-6" onMouseLeave={() => setActiveIndex(null)}>
+        <div className="flex flex-1 flex-col justify-evenly py-1 sm:justify-start sm:gap-3 lg:gap-4 xl:gap-6" onMouseLeave={() => setActiveIndex(null)}>
           {projects.map((project, index) => {
             const isActive = activeIndex === index;
             return (
@@ -67,12 +67,12 @@ const WorkSection = () => {
                 key={project.id}
                 href={project.link}
                 onMouseEnter={() => setActiveIndex(index)}
-                className="group relative flex flex-col justify-between gap-0 py-1 transition-all duration-300 cursor-pointer sm:flex-row sm:items-center sm:gap-0 sm:py-2 lg:py-2.5 xl:py-3"
+                className="group relative flex flex-col justify-between gap-0.5 py-0.5 transition-all duration-300 cursor-pointer sm:flex-row sm:items-center sm:gap-0 sm:py-2 lg:py-2.5 xl:py-3"
               >
                 {/* Project Name */}
                 <div className="w-full sm:w-1/3">
                   <h3
-                    className={`text-[1.35rem] font-bold tracking-tight transition-all duration-500 ease-out sm:text-3xl lg:text-[2.15rem] xl:text-[2.65rem] ${
+                    className={`text-[1.15rem] font-bold tracking-tight transition-all duration-500 ease-out sm:text-2xl lg:text-[2.15rem] xl:text-[2.65rem] ${
                       isActive ? "translate-x-3 text-black" : "translate-x-0 text-[#a3a3a3]"
                     }`}
                   >
@@ -81,9 +81,9 @@ const WorkSection = () => {
                 </div>
 
                 {/* Mobile: tags (left) + category (far right) */}
-                <div className="flex w-full min-h-[2rem] items-center justify-between sm:hidden">
+                <div className="flex w-full min-h-[1.5rem] items-center justify-between sm:hidden">
                   <p
-                    className={`text-[10px] font-normal transition-colors duration-300 ${
+                    className={`text-[9.5px] font-normal transition-colors duration-300 ${
                       isActive ? "text-black" : "text-[#a3a3a3]"
                     }`}
                   >
@@ -91,7 +91,7 @@ const WorkSection = () => {
                   </p>
 
                   <span
-                    className={`text-[10px] transition-colors duration-300 ${
+                    className={`text-[9.5px] transition-colors duration-300 ${
                       isActive ? "font-medium text-black" : "text-[#a3a3a3]"
                     }`}
                   >

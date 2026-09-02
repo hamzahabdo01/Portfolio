@@ -9,12 +9,8 @@ const BioSection = () => {
     >
       <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col justify-center">
         {/* Mobile View */}
-        <div className="flex flex-1 flex-col justify-center gap-5 lg:hidden">
-          <h2 className="text-[clamp(2.6rem,8vw,4.5rem)] font-bold italic leading-none tracking-[-0.08em]">
-            Hamzah Abdo.
-          </h2>
-
-          <div className="relative mx-auto w-full max-w-[310px] sm:max-w-[380px]">
+        <div className="flex flex-1 flex-col justify-center gap-4 lg:hidden">
+          <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[340px]">
             <SkeletonImage
               src={hamzaBio}
               alt="Hamzah Abdo"
@@ -22,7 +18,11 @@ const BioSection = () => {
             />
           </div>
 
-          <div className="space-y-2.5 text-sm font-semibold leading-relaxed tracking-[-0.03em] sm:text-base">
+          <h2 className="text-[clamp(2.2rem,7.5vw,3.8rem)] font-bold italic leading-none tracking-[-0.08em]">
+            Hamzah Abdo.
+          </h2>
+
+          <div className="space-y-2 text-xs font-semibold leading-relaxed tracking-[-0.03em] sm:text-sm">
             <p>
               I am Hamzah, a Full-Stack Developer based in Addis Ababa, Ethiopia with over 2 years of experience.
             </p>
@@ -31,7 +31,7 @@ const BioSection = () => {
             </p>
           </div>
 
-          <div className="flex items-center justify-between border-t border-black/10 pt-3.5 text-xs font-bold uppercase tracking-tight text-black/60 sm:text-sm">
+          <div className="flex items-center justify-between border-t border-black/10 pt-3 text-xs font-bold uppercase tracking-tight text-black/60 sm:text-sm">
             <span>2+ YRS EXP</span>
             <span>15+ PROJECTS</span>
             <span>FULL-STACK</span>

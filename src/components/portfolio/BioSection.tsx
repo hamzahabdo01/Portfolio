@@ -1,66 +1,92 @@
 import SkeletonImage from "@/components/ui/SkeletonImage";
-import portrait from "../../assets/hero/hamza-child.webp";
+import hamzaBio from "../../assets/hero/hamza-bio.avif";
 
 const BioSection = () => {
   return (
-    <section id="bio" className="flex h-dvh shrink-0 snap-start snap-always flex-col justify-start overflow-hidden bg-[#f7f4f1] px-5 pt-16 pb-6 text-black sm:px-8 lg:px-10 lg:pt-24 lg:pb-8">
-      <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col">
-        {/* Mobile / tablet view */}
-        <div className="flex flex-1 flex-col justify-center gap-3 lg:hidden">
-          <div className="flex items-start">
-            <h2 className="text-[clamp(4.5rem,9.5vw,9.5rem)] font-bold italic leading-[0.78] tracking-[-0.1em]">Hey!</h2>
-            <span className="relative ml-2 mt-7 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#f6b94d] text-3xl font-normal leading-none text-[#f6b94d] sm:h-20 sm:w-20 sm:text-4xl">
-              <span>⌣</span>
-              <i className="absolute left-[27%] top-[29%] h-1.5 w-1.5 rounded-full bg-[#f6b94d] sm:h-2 sm:w-2" />
-              <i className="absolute right-[27%] top-[29%] h-1.5 w-1.5 rounded-full bg-[#f6b94d] sm:h-2 sm:w-2" />
-            </span>
+    <section
+      id="bio"
+      className="relative flex h-dvh shrink-0 snap-start snap-always flex-col justify-center overflow-hidden bg-[#f7f4f1] px-5 py-6 text-black sm:px-8 sm:py-8 lg:px-10 lg:py-10"
+    >
+      <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col justify-center">
+        {/* Mobile View */}
+        <div className="flex flex-1 flex-col justify-center gap-5 lg:hidden">
+          <h2 className="text-[clamp(2.6rem,8vw,4.5rem)] font-bold italic leading-none tracking-[-0.08em]">
+            Hamzah Abdo.
+          </h2>
+
+          <div className="relative mx-auto w-full max-w-[310px] sm:max-w-[380px]">
+            <SkeletonImage
+              src={hamzaBio}
+              alt="Hamzah Abdo"
+              className="aspect-[4/5] w-full rounded-2xl object-cover object-top"
+            />
           </div>
 
-          <div className="text-sm font-semibold leading-[1.7] tracking-[-0.04em] [word-spacing:0.18em] sm:leading-[1.8]">
+          <div className="space-y-2.5 text-sm font-semibold leading-relaxed tracking-[-0.03em] sm:text-base">
             <p>
-              I am a Software Engineer with over 2 years of experience. I have worked with multiple sectors and had the privilege of collaborating with exceptional entrepreneurs.
+              I am Hamzah, a Full-Stack Developer based in Addis Ababa, Ethiopia with over 2 years of experience.
             </p>
-            <p className="mt-4">
-              My work focuses on combining creativity and functionality to deliver exceptional user experiences while enhancing business performance. With a rich portfolio and a passion for innovation, I continue to contribute to impactful digital solutions.
+            <p className="text-black/70">
+              I build scalable backend systems and refined interfaces. Open to new roles & freelance collaborations.
             </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[600px]">
-            <SkeletonImage src={portrait} alt="Illustrated portrait of Hamzah Abdo" className="mx-auto h-[28dvh] w-auto rounded-[2rem] object-contain sm:h-[34dvh]" />
+          <div className="flex items-center justify-between border-t border-black/10 pt-3.5 text-xs font-bold uppercase tracking-tight text-black/60 sm:text-sm">
+            <span>2+ YRS EXP</span>
+            <span>15+ PROJECTS</span>
+            <span>FULL-STACK</span>
           </div>
-
-          <p className="hidden text-[clamp(1.3rem,2vw,2rem)] font-semibold leading-[1.02] tracking-[-0.065em]">
-            Design by <span className="font-[1000] italic">Hamzah</span>, a software engineer based in Addis Ababa, Ethiopia. Currently part of the design team at <span className="italic">JLink.</span>
-          </p>
         </div>
 
-        {/* Desktop view */}
-        <div className="hidden grid-cols-[1.05fr_1.35fr_0.95fr] gap-x-10 lg:grid lg:pt-10">
-          <div className="self-start">
-            <div className="flex items-start">
-              <h2 className="text-[clamp(4.5rem,9.5vw,9.5rem)] font-bold italic leading-[0.78] tracking-[-0.1em]">Hey!</h2>
-              <span className="relative ml-2 mt-7 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#f6b94d] text-3xl font-normal leading-none text-[#f6b94d] sm:h-20 sm:w-20 sm:text-4xl">
-                <span>⌣</span>
-                <i className="absolute left-[27%] top-[29%] h-1.5 w-1.5 rounded-full bg-[#f6b94d] sm:h-2 sm:w-2" />
-                <i className="absolute right-[27%] top-[29%] h-1.5 w-1.5 rounded-full bg-[#f6b94d] sm:h-2 sm:w-2" />
-              </span>
+        {/* Desktop View */}
+        <div className="hidden flex-1 grid-cols-[1.15fr_1.25fr_1fr] items-center gap-12 lg:grid xl:gap-16">
+          {/* Left: Heading & Intro */}
+          <div className="flex flex-col justify-center">
+            <h2 className="text-[clamp(3.5rem,6.5vw,6.5rem)] font-bold italic leading-[0.88] tracking-[-0.09em]">
+              Hamzah Abdo.
+            </h2>
+            <p className="mt-8 max-w-[400px] text-[clamp(1.3rem,1.9vw,1.9rem)] font-semibold leading-[1.15] tracking-[-0.06em]">
+              Full-Stack Developer based in Addis Ababa, Ethiopia. Available for full-time roles & freelance.
+            </p>
+          </div>
+
+          {/* Center: Clean portrait positioned lower */}
+          <div className="flex items-center justify-center lg:translate-y-8 xl:translate-y-12">
+            <div className="w-full max-w-[450px] xl:max-w-[490px]">
+              <SkeletonImage
+                src={hamzaBio}
+                alt="Hamzah Abdo"
+                className="aspect-[3/4] w-full rounded-3xl object-cover object-top"
+              />
             </div>
-            <p className="mt-16 max-w-[300px] text-[clamp(1.3rem,2vw,2rem)] font-semibold leading-[1.02] tracking-[-0.065em] lg:mt-[12rem]">
-              Design by <span className="font-[1000] italic">Hamzah</span>, a software engineer based in Addis Ababa, Ethiopia. Currently part of the design team at <span className="italic">JLink.</span>
-            </p>
           </div>
 
-          <div className="relative mx-auto mt-24 w-full max-w-[600px] lg:mt-[7rem] lg:-translate-x-5 lg:self-center">
-            <img src={portrait} alt="Illustrated portrait of Hamzah Abdo" className="h-auto w-full rounded-[2rem]" />
-          </div>
+          {/* Right: Narrative & Clean Minimal Stats */}
+          <div className="flex flex-col justify-center space-y-8 text-[15px] xl:text-[17px] font-semibold leading-[1.8] tracking-[-0.03em] text-black/80">
+            <div className="space-y-5">
+              <p>
+                I focus on combining robust engineering with thoughtful design to build high-performance digital solutions that elevate businesses and delight users.
+              </p>
+              <p className="text-black/60 font-medium">
+                With a background across multiple sectors, I craft end-to-end applications from architecture to interaction.
+              </p>
+            </div>
 
-          <div className="mt-24 max-w-[320px] text-sm font-semibold leading-[1.8] tracking-[-0.04em] [word-spacing:0.2em] lg:mt-[15rem]">
-            <p>
-              I am a Software Engineer with over 2 years of experience. I have worked with multiple sectors and had the privilege of collaborating with exceptional entrepreneurs.
-            </p>
-            <p className="mt-10">
-              My work focuses on combining creativity and functionality to deliver exceptional user experiences while enhancing business performance. With a rich portfolio and a passion for innovation, I continue to contribute to impactful digital solutions.
-            </p>
+            {/* Minimal Stat Lines */}
+            <div className="border-t border-black/15 pt-6 space-y-3.5 text-sm xl:text-base uppercase tracking-wider font-bold">
+              <div className="flex items-center justify-between">
+                <span className="text-black/50 text-xs xl:text-sm">Experience</span>
+                <span className="text-black">2+ Years</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-black/50 text-xs xl:text-sm">Delivered</span>
+                <span className="text-black">15+ Solutions</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-black/50 text-xs xl:text-sm">Focus</span>
+                <span className="text-black">Full-Stack & UI</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

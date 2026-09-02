@@ -7,10 +7,6 @@ import arifsourceLaptop from "../assets/arifsource/arifsource-laptop.webp";
 import arifsourceIpad from "../assets/arifsource/arifsource-ipad.webp";
 import arifsourceMobileOne from "../assets/arifsource/arifsource-mobile-one.webp";
 import arifsourceMobileTwo from "../assets/arifsource/arifsource-mobile-two.webp";
-import fanosLaptop from "../assets/fanos/fanos-laptop.webp";
-import fanosIpad from "../assets/fanos/fanos-ipad.webp";
-import fanosMobileOne from "../assets/fanos/fanos-mobile-one.webp";
-import fanosMobileTwo from "../assets/fanos/fanos-mobile-two.webp";
 import hudaLaptop from "../assets/huda/huda-laptop.webp";
 import hudaIpad from "../assets/huda/huda-ipad.webp";
 import hudaMobileOne from "../assets/huda/huda-mobile-one.webp";
@@ -23,6 +19,10 @@ import wbsLaptop from "../assets/wbs/wbs-laptop.webp";
 import wbsIpad from "../assets/wbs/wbs-ipad.webp";
 import wbsMobileOne from "../assets/wbs/wbs-mobile-one.webp";
 import wbsMobileTwo from "../assets/wbs/wbs-mobile-two.webp";
+import girlupLaptop from "../assets/girl-up-artemis/girlup-laptop.avif";
+import girlupIpad from "../assets/girl-up-artemis/girlup-ipad.avif";
+import girlupMobileOne from "../assets/girl-up-artemis/girlup-mobile1.avif";
+import girlupMobileTwo from "../assets/girl-up-artemis/girlup-mobile2.avif";
 
 type ProjectImages = {
   laptop: string;
@@ -46,12 +46,6 @@ const projectImages: Record<string, ProjectImages> = {
     mobileOne: arifsourceMobileOne,
     mobileTwo: arifsourceMobileTwo,
   },
-  fanos: {
-    laptop: fanosLaptop,
-    ipad: fanosIpad,
-    mobileOne: fanosMobileOne,
-    mobileTwo: fanosMobileTwo,
-  },
   huda: {
     laptop: hudaLaptop,
     ipad: hudaIpad,
@@ -70,6 +64,12 @@ const projectImages: Record<string, ProjectImages> = {
     mobileOne: wbsMobileOne,
     mobileTwo: wbsMobileTwo,
   },
+  artemis: {
+    laptop: girlupLaptop,
+    ipad: girlupIpad,
+    mobileOne: girlupMobileOne,
+    mobileTwo: girlupMobileTwo,
+  },
 };
 
 const projectsData: Record<string, Project> = {
@@ -81,15 +81,6 @@ const projectsData: Record<string, Project> = {
     description:
       "ArifSource is a B2B marketplace platform designed to connect suppliers and buyers, streamlining the procurement process with real-time RFQ management and seamless communication.",
     ...projectImages.arifsource,
-  },
-  fanos: {
-    name: "Fanos",
-    tags: "UI / UX / Frontend",
-    category: "Dashboard",
-    url: "https://fanos-refined.vercel.app",
-    description:
-      "Fanos is a modern dashboard interface designed for data visualization and management, providing intuitive controls and real-time analytics.",
-    ...projectImages.fanos,
   },
   huda: {
     name: "Huda",
@@ -117,6 +108,15 @@ const projectsData: Record<string, Project> = {
     description:
       "Women Beyond Silence is a collective digital space centering gender justice and mental health, designed to facilitate healing and international advocacy.",
     ...projectImages.women,
+  },
+  artemis: {
+    name: "Girl Up Artemis",
+    tags: "UI / UX / Frontend",
+    category: "Website",
+    url: "https://girlupartemis.org",
+    description:
+      "Girl Up Artemis is a community-based club for young leaders across SWANA and the Global South. Inspired by the pursuit of justice and wisdom, we're building a future where women are leaders, providers, and pillars of the economy.",
+    ...projectImages.artemis,
   },
 };
 

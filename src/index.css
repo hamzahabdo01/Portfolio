@@ -86,11 +86,6 @@
     color: hsl(0 0% 100%);
   }
 
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;

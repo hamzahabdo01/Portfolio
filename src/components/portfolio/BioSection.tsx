@@ -33,7 +33,7 @@ const BioSection = () => {
 
           <div className="flex items-center justify-between border-t border-black/10 pt-3 text-xs font-bold uppercase tracking-tight text-black/60 sm:text-sm">
             <span>2+ YRS EXP</span>
-            <span>15+ PROJECTS</span>
+            <span>5+ PROJECTS</span>
             <span>FULL-STACK</span>
           </div>
         </div>

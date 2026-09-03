@@ -5,11 +5,11 @@ const BioSection = () => {
   return (
     <section
       id="bio"
-      className="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-[#f7f4f1] px-5 py-16 text-black sm:px-8 sm:py-20 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:px-10 lg:py-10"
+      className="relative flex min-h-dvh flex-col overflow-hidden bg-[#f7f4f1] px-5 pt-24 pb-6 text-black sm:px-8 sm:pt-28 sm:pb-8 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:px-10 lg:py-10"
     >
-      <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col justify-center">
+      <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col justify-between">
         {/* Mobile View */}
-        <div className="flex flex-1 flex-col justify-center gap-4 lg:hidden">
+        <div className="flex flex-1 flex-col justify-between gap-4 lg:hidden">
           <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[340px]">
             <SkeletonImage
               src={hamzaBio}

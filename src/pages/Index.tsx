@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div
       id="page-scroll"
-      className="overflow-y-auto overflow-x-hidden overscroll-y-contain lg:h-dvh lg:snap-y lg:snap-mandatory lg:scroll-smooth"
+      className="h-dvh overflow-y-auto overflow-x-hidden overscroll-y-contain lg:snap-y lg:snap-mandatory lg:scroll-smooth"
     >
       <Navigation />
       <HeroSection />

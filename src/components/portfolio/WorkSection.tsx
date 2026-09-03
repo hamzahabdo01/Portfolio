@@ -53,13 +53,13 @@ const WorkSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="work" className="flex flex-col overflow-hidden bg-[#f7f4f1] px-5 pt-16 pb-8 text-black sm:px-8 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:overflow-hidden lg:pt-20 lg:px-10 lg:pb-8">
-      <div className="mx-auto w-full max-w-[1600px] flex flex-col lg:h-full lg:justify-between">
+    <section id="work" className="flex min-h-dvh flex-col overflow-hidden bg-[#f7f4f1] px-5 pt-24 pb-6 text-black sm:px-8 sm:pt-28 sm:pb-8 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:overflow-hidden lg:pt-20 lg:px-10 lg:pb-8">
+      <div className="mx-auto w-full max-w-[1600px] flex h-full flex-col justify-between">
         <h2 className="text-3xl font-bold tracking-[-0.08em] leading-none mb-1 sm:text-4xl sm:mb-3 lg:text-[clamp(3.2rem,5.5vw,5.5rem)] lg:mb-6">
           Work
         </h2>
 
-        <div className="flex flex-col gap-3 py-4 sm:gap-3 lg:flex-1 lg:justify-evenly lg:py-1 xl:gap-6" onMouseLeave={() => setActiveIndex(null)}>
+        <div className="flex flex-1 flex-col justify-between py-2 sm:gap-3 lg:flex-1 lg:justify-evenly lg:py-1 xl:gap-6" onMouseLeave={() => setActiveIndex(null)}>
           {projects.map((project, index) => {
             const isActive = activeIndex === index;
             return (

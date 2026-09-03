@@ -20,11 +20,11 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-dvh overflow-hidden bg-[#f7f4f1] px-5 pb-6 pt-24 text-black sm:px-8 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:px-10"
+      className="relative h-svh shrink-0 snap-start snap-always overflow-hidden bg-[#f7f4f1] px-5 pb-6 pt-20 text-black sm:px-8 lg:h-dvh lg:px-10 lg:pt-24"
     >
-      <div className="mx-auto flex min-h-[calc(100dvh-7.5rem)] max-w-[1600px] flex-col justify-between lg:h-[calc(100dvh-7.5rem)] lg:min-h-0">
+      <div className="mx-auto flex h-full max-w-[1600px] flex-col justify-between">
         {/* Mobile / tablet: vertical stack */}
-        <div className="flex flex-1 flex-col items-center justify-center pb-40 lg:hidden">
+        <div className="flex flex-1 flex-col items-center justify-center pb-12 sm:pb-20 lg:hidden">
           <SkeletonImage
             src={portrait}
             alt="Illustrated portrait of Hamzah Abdo"

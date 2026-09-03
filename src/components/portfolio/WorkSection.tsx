@@ -53,8 +53,8 @@ const WorkSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="work" className="flex min-h-dvh flex-col overflow-hidden bg-[#f7f4f1] px-5 pt-24 pb-6 text-black sm:px-8 sm:pt-28 sm:pb-8 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:overflow-hidden lg:pt-20 lg:px-10 lg:pb-8">
-      <div className="mx-auto w-full max-w-[1600px] flex min-h-[calc(100dvh-7.5rem)] flex-col sm:min-h-[calc(100dvh-9rem)] lg:min-h-0 lg:h-full lg:justify-between">
+    <section id="work" className="flex h-svh shrink-0 snap-start snap-always flex-col overflow-hidden bg-[#f7f4f1] px-5 pt-20 pb-6 text-black sm:px-8 sm:pt-28 sm:pb-8 lg:h-dvh lg:overflow-hidden lg:pt-20 lg:px-10 lg:pb-8">
+      <div className="mx-auto w-full max-w-[1600px] flex h-full flex-col justify-between">
         {/* Desktop-only heading (outside the list) */}
         <h2 className="hidden lg:block lg:text-[clamp(3.2rem,5.5vw,5.5rem)] lg:font-bold lg:tracking-[-0.08em] lg:leading-none lg:mb-6">
           Work

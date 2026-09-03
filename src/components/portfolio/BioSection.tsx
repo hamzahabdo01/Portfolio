@@ -5,20 +5,20 @@ const BioSection = () => {
   return (
     <section
       id="bio"
-      className="relative flex min-h-dvh flex-col overflow-hidden bg-[#f7f4f1] px-5 pt-24 pb-6 text-black sm:px-8 sm:pt-28 sm:pb-8 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:px-10 lg:py-10"
+      className="relative flex h-svh shrink-0 snap-start snap-always flex-col overflow-hidden bg-[#f7f4f1] px-5 pt-20 pb-6 text-black sm:px-8 sm:pt-28 sm:pb-8 lg:h-dvh lg:px-10 lg:py-10"
     >
       <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col justify-between">
         {/* Mobile View */}
-        <div className="flex flex-1 flex-col justify-between gap-4 lg:hidden">
-          <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[340px]">
+        <div className="flex flex-1 flex-col justify-between gap-3 lg:hidden">
+          <div className="relative mx-auto flex items-center justify-center">
             <SkeletonImage
               src={hamzaBio}
               alt="Hamzah Abdo"
-              className="aspect-[4/5] w-full rounded-2xl object-cover object-top"
+              className="aspect-[4/5] max-h-[45svh] sm:max-h-[38svh] w-auto rounded-3xl object-cover object-top"
             />
           </div>
 
-          <h2 className="text-[clamp(2.2rem,7.5vw,3.8rem)] font-bold italic leading-none tracking-[-0.08em]">
+          <h2 className="whitespace-nowrap text-[clamp(1.85rem,11vw,3.2rem)] font-bold italic leading-none tracking-[-0.08em]">
             Hamzah Abdo.
           </h2>
 

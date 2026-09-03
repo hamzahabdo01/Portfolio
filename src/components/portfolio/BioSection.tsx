@@ -24,10 +24,10 @@ const BioSection = () => {
 
           <div className="space-y-2 text-xs font-semibold leading-relaxed tracking-[-0.03em] sm:text-sm">
             <p>
-              I am Hamzah, a Full-Stack Developer based in Addis Ababa, Ethiopia with over 2 years of experience.
+              A Full-Stack Developer based in Addis Ababa, Ethiopia with over 2 years of experience.
             </p>
             <p className="text-black/70">
-              I build scalable backend systems and refined interfaces. Open to new roles & freelance collaborations.
+              Building scalable backend systems and refined interfaces. Open to new roles & freelance collaborations.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ const BioSection = () => {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-black/50 text-xs xl:text-sm">Delivered</span>
-                <span className="text-black">15+ Solutions</span>
+                <span className="text-black">5+ Solutions</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-black/50 text-xs xl:text-sm">Focus</span>

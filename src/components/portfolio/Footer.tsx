@@ -16,9 +16,9 @@ const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>, id: string)
 const Footer = () => {
   return (
     <footer id="contact" className="flex min-h-dvh flex-col overflow-hidden bg-black text-white px-5 pt-24 pb-3 sm:px-8 sm:pt-28 lg:h-dvh lg:min-h-0 lg:shrink-0 lg:snap-start lg:snap-always lg:px-10">
-      <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col">
+      <div className="mx-auto flex min-h-[calc(100dvh-6.75rem)] w-full max-w-[1600px] flex-col justify-between sm:min-h-[calc(100dvh-7.75rem)] lg:min-h-0 lg:h-full">
         {/* Main CTA */}
-        <div className="flex flex-1 flex-col justify-center gap-6 lg:gap-10">
+        <div className="flex flex-col gap-6 lg:flex-1 lg:justify-center lg:gap-10">
           {/* Headline */}
           <div className="text-left">
             <h2 className="text-[clamp(1.6rem,4vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.04em]">
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
 
         {/* Large Creative is */}
-        <div className="shrink-0 border-t border-white/10 py-1.5 sm:py-3">
+        <div className="flex flex-1 items-center justify-center border-t border-white/10 lg:shrink-0 lg:flex-none lg:justify-start lg:py-1.5 lg:block sm:py-3">
           <div className="flex items-center justify-center gap-4 sm:justify-start sm:gap-6">
             <div className="hidden h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-white/20 sm:block sm:h-44 sm:w-44">
               <SkeletonImage
@@ -91,7 +91,7 @@ const Footer = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-            <span className="text-[clamp(1.6rem,7vw,12rem)] font-bold tracking-[-0.04em] leading-none whitespace-nowrap sm:text-[clamp(3rem,11vw,12rem)]">
+            <span className="text-[clamp(2.4rem,8vw,12rem)] font-bold tracking-[-0.04em] leading-none whitespace-nowrap sm:text-[clamp(3rem,11vw,12rem)]">
               Creative is joy
             </span>
           </div>
